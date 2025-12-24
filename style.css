@@ -1,0 +1,56 @@
+/* GLOBAL SETTINGS */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Helvetica Neue', sans-serif; }
+body { width:100%; overflow-x:hidden; background:white; }
+a { text-decoration:none; color:black; }
+ul { list-style:none; }
+img { display:block; width:100%; height:auto; }
+.flex-sb { display:flex; justify-content:space-between; align-items:center; }
+
+/* NAVBAR & TOP */
+.top-bar { padding:10px 40px; background:white; color:#E50010; font-size:13px; font-weight:bold; }
+.navbar { padding:20px 40px; height:64px; background:white; }
+.nav-left { display:flex; gap:30px; align-items:center; }
+.logo { color:#E50010; font-size:24px; font-weight:900; letter-spacing:-2px; }
+.nav-links a { margin-right:20px; font-size:13px; font-weight:bold; }
+.nav-icons { display:flex; gap:20px; font-size:18px; }
+
+/* HERO SECTION */
+.hero-container { position:relative; width:100%; }
+.hero-text { position:absolute; top:30%; left:5%; line-height:0.9; }
+.hero-text h1 { color:#E50010; font-size:60px; font-weight:900; }
+
+/* INFO BAR */
+.info-bar { padding:20px 40px; background:white; }
+.info-title { font-size:14px; font-weight:bold; }
+.info-link { font-size:12px; color:gray; text-decoration:underline; }
+
+/* GRIDS */
+.campaign-section { padding:40px; background:white; }
+.grid-2 { display:grid; grid-template-columns:repeat(2, 1fr); gap:20px; }
+.campaign-text { margin-top:10px; font-size:14px; font-weight:bold; }
+
+.new-in-section { padding:40px 4px 60px 4px; }
+.section-header { margin-bottom:25px; font-weight:bold; font-size:14px; }
+.grid-5 { display:grid; grid-template-columns:repeat(5, 1fr); gap:20px; }
+
+/* FEATURE SECTION */
+.single-feature-section { padding:40px 4px; background:white; }
+.feature-text { margin-top:20px; }
+.feature-text h4 { font-size:18px; font-weight:900; letter-spacing:1px; }
+
+/* LINK FOOTER */
+.site-footer { background:#e4e4e4; padding:60px 40px; margin-top:40px; }
+.grid-4 { display:grid; grid-template-columns:repeat(4, 1fr); gap:40px; }
+.footer-col h3 { font-size:14px; margin-bottom:20px; font-weight:bold; }
+.footer-col li { margin-bottom:12px; }
+.footer-col a { font-size:13px; color:#222; }
+.more-info { font-weight:bold; border-bottom:1px solid black; }
+
+/* BOTTOM FOOTER */
+.hm-footer { background:white; padding:40px 0; margin-top:20px; }
+.footer-top { padding-left:40px; margin-bottom:40px; }
+.footer-logo { font-size:32px; font-weight:900; letter-spacing:-2px; margin-bottom:10px; }
+.footer-region span { font-weight:bold; font-size:14px; margin-right:15px; }
+.footer-bottom { padding:0 40px; }
+.copyright-text { font-size:12px; color:#222; }
+.social-icons { display:flex; gap:25px; font-size:22px; }
