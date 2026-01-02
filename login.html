@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>H&M | Log in</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#0e0e0e;
+    min-height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+nav {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    background: #161616;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.nav-btn {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: #2a2a2a;
+}
+
+.nav-btn.active {
+    background: #fff;
+    color: #000;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card{
+    width:100%;
+    max-width:400px;
+    background:#161616;
+    padding:32px;
+    border-radius:14px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.6);
+    text-align:center;
+}
+
+.logo img{
+    width:140px;
+    margin-bottom:22px;
+}
+
+.card h2{
+    color:#fff;
+    font-size:20px;
+    font-weight:500;
+    margin-bottom:20px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+input{
+    background:#1f1f1f;
+    border:1px solid #2a2a2a;
+    padding:14px;
+    border-radius:8px;
+    color:#fff;
+    font-size:14px;
+}
+
+input::placeholder{
+    color:#888;
+}
+
+input:focus{
+    outline:none;
+    border-color:#e50010;
+}
+
+button.submit-btn{
+    margin-top:6px;
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    background:#e50010;
+    color:#fff;
+    font-size:14px;
+    cursor:pointer;
+    font-weight: bold;
+}
+
+button.submit-btn:hover{
+    background:#ff1a2d;
+}
+
+.switch-link{
+    margin-top:18px;
+    font-size:13px;
+    color:#aaa;
+}
+
+.switch-link a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.switch-link a:hover {
+    text-decoration: underline;
+}
+
+.forgot-pass {
+    text-align: right;
+    font-size: 12px;
+}
+.forgot-pass a {
+    color: #aaa;
+    text-decoration: none;
+}
+.forgot-pass a:hover {
+    color: #fff;
+}
+
+@media(max-width:480px){
+    .card{
+        padding:26px;
+    }
+    .logo img{
+        width:120px;
+    }
+    nav {
+        justify-content: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-btn back-link">Home</a>
+        <a href="#" class="nav-btn active">Log in</a>
+        <a href="signup.html" class="nav-btn">Sign up</a>
+    </nav>
+
+    <div class="container">
+        
+        <div class="card">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://logo-teka.com/wp-content/uploads/2025/07/h-and-m-logo.svg" alt="H&M">
+                </a>
+            </div>
+
+            <h2>Log in</h2>
+
+            <form>
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Password" required>
+                
+                <div class="forgot-pass">
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="submit-btn">Log in</button>
+            </form>
+
+            <div class="switch-link">
+                Not a member yet? <a href="signup.html">Join us here</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

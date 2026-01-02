@@ -49,15 +49,44 @@ img {
     width: 100%;
     z-index: 99;
     position: fixed;
-    padding: 20px 20px;
+    padding: 20px 40px;
     height: 64px;
     background: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
 }
 
 .nav-left {
     display: flex;
     gap: 30px;
     align-items: center;
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.login-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.login-link:hover {
+    color: #e50010;
+}
+
+.divider {
+    color: #666;
+    margin: 0 10px;
+    font-size: 12px;
 }
 
 .logo {
@@ -323,6 +352,13 @@ img {
         flex-direction: row;
         padding: 15px;
         gap: 20px;
+        justify-content: space-between; 
+    }
+    
+    .auth-buttons {
+        margin-left: 0;
+        margin-right: 0;
+        display: none;
     }
 
     .nav-left {
