@@ -349,22 +349,23 @@ img {
 
     .navbar {
         height: auto;
-        flex-direction: row;
-        padding: 15px;
-        gap: 20px;
-        justify-content: space-between; 
+        flex-wrap: wrap;
+        padding: 10px;
+        justify-content: space-between;
     }
     
     .auth-buttons {
-        margin-left: 0;
-        margin-right: 0;
-        display: none;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin: 10px 0;
+        order: 3;
     }
 
     .nav-left {
-        flex-direction: row;
-        width: auto;
-        text-align: left;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
     }
 
     .menu-toggle {
@@ -407,7 +408,9 @@ img {
     }
 
     .nav-icons {
-        gap: 20px;
+        width: 100%;
+        justify-content: center;
+        order: 4;
     }
 
     .grid-5 {
