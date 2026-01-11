@@ -348,47 +348,59 @@ img {
 @media screen and (max-width: 768px) {
 
     .navbar {
-        height: auto;
-        flex-wrap: wrap;
-        padding: 10px;
-        justify-content: space-between;
-    }
-    
-    .auth-buttons {
+        height: auto; 
         display: flex;
+        flex-direction: column; 
+        padding: 0; 
+        margin-top: 33px; 
+        background: #121212;
+    }
+
+    .auth-buttons {
+        order: 1; 
+        display: flex !important; 
         width: 100%;
+        background-color: white; 
         justify-content: center;
-        margin: 10px 0;
-        order: 3;
+        padding: 10px 0;
+        margin: 0;
+    }
+
+    .auth-buttons .login-link {
+        color: black !important; 
+        font-size: 12px;
     }
 
     .nav-left {
+        order: 2;
         width: 100%;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-
-    .menu-toggle {
-        display: none;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        padding: 10px 20px;
+        gap: 0;
     }
 
     .hamburger {
-        display: block;
-        cursor: pointer;
+        display: block !important;
         font-size: 24px;
         color: white;
-        margin: 0 10px;
+    }
+
+    .nav-icons {
+        order: 3;
+        width: 100%;
+        display: flex;
+        justify-content: center; 
+        gap: 30px;
+        padding-bottom: 15px;
     }
 
     .nav-menu {
+        order: 4;
         display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
         width: 100%;
-        background: #121212;
-        text-align: center;
-        padding: 10px 0;
+        background: #1e1e1e;
     }
 
     .menu-toggle:checked ~ .nav-menu {
@@ -397,20 +409,9 @@ img {
 
     .nav-links {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column; 
+        padding: 20px;
         gap: 15px;
-    }
-
-    .nav-links a {
-        margin-right: 0;
-        font-size: 14px;
-    }
-
-    .nav-icons {
-        width: 100%;
-        justify-content: center;
-        order: 4;
     }
 
     .grid-5 {
@@ -418,7 +419,7 @@ img {
         gap: 10px; 
     }
 
-   .grid-2 {
+    .grid-2 {
         grid-template-columns: 1fr;
     }
 
