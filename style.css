@@ -346,78 +346,74 @@ img {
 
 
 @media screen and (max-width: 768px) {
-
+    /* 1. Reset Navbar to be a vertical stack */
     .navbar {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        padding: 0; 
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important; /* Forces 3 lines */
+        padding: 0 !important; 
         margin-top: 33px; 
         background: #121212;
     }
 
+    /* LINE 1: White Bar (Sign Up | Log In) */
     .auth-buttons {
-        order: 1;
+        order: 1 !important; /* Moves to very top */
         display: flex !important;
-        width: 100%;
-        background-color: white;
-        justify-content: center;
-        padding: 8px 0;
-        margin: 0;
+        width: 100% !important;
+        background-color: white !important; 
+        justify-content: center !important;
+        padding: 10px 0 !important;
+        margin: 0 !important;
     }
 
     .auth-buttons .login-link {
-        color: black !important;
+        color: black !important; /* Black text for white bar */
         font-size: 13px;
         font-weight: bold;
     }
 
-    .auth-buttons .divider {
-        color: #666;
-    }
-
+    /* LINE 2: Middle Row (H&M Logo and Hamburger) */
     .nav-left {
-        order: 2;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        background: #121212;
+        order: 2 !important; /* Moves to middle */
+        width: 100% !important;
+        display: flex !important;
+        justify-content: space-between !important; /* Logo left, Bars right */
+        align-items: center !important;
+        padding: 15px 20px !important;
+        gap: 0 !important; /* Removes desktop gap */
     }
 
-    .logo {
-        margin: 0;
-        font-size: 26px;
-    }
-
+    /* Ensure Logo and Hamburger look right in the middle line */
+    .logo { margin: 0 !important; }
     .hamburger {
         display: block !important;
         font-size: 24px;
         color: white;
-        margin: 0;
     }
 
+    /* LINE 3: Bottom Row (Search and User Icons) */
     .nav-icons {
-        order: 3;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        padding: 10px 0 20px 0;
-        background: #121212;
+        order: 3 !important; /* Moves to bottom */
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important; /* Centers icons row */
+        gap: 35px !important;
+        padding: 10px 0 20px 0 !important;
     }
 
+    /* --- Menu Toggle Logic --- */
     .nav-menu {
-        order: 4;
+        order: 4 !important;
         display: none;
         width: 100%;
         background: #1e1e1e;
-        text-align: center;
+        position: relative;
+        top: 0;
     }
 
     .menu-toggle:checked ~ .nav-menu {
-        display: block;
+        display: block !important;
     }
 
     .nav-links {
@@ -425,50 +421,17 @@ img {
         flex-direction: column;
         padding: 20px;
         gap: 15px;
+        text-align: center;
     }
 
-    .grid-5 { 
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 10px; 
-    }
-
-    .grid-2, .grid-4 { 
-        grid-template-columns: 1fr; 
-    }
-
-    .hero-text {
-        top: 20%; 
-        left: 50%; 
-        transform: translateX(-50%); 
-        text-align: center; 
-        width: 100%; 
-    }
-
-    .hero-text h1 { 
-        font-size: 32px; 
-    }
-
-    .flex-sb { 
-        flex-wrap: wrap; 
-    }
-
-    .info-bar { 
-        text-align: center; 
-        justify-content: center; 
-        gap: 10px; 
-    }
-
-    .info-bar .fa-plus { 
-        display: none; 
-    }
-
-    .footer-bottom { 
-        flex-direction: column; 
-        gap: 20px; 
-        text-align: center; 
-    }
-
-    .social-icons { 
-        justify-content: center;
-    }
+    /* --- Keep your other grid/hero styles below --- */
+    .grid-5 { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .grid-2, .grid-4 { grid-template-columns: 1fr; }
+    .hero-text { top: 20%; left: 50%; transform: translateX(-50%); text-align: center; width: 100%; }
+    .hero-text h1 { font-size: 32px; }
+    .flex-sb { flex-wrap: wrap; }
+    .info-bar { text-align: center; justify-content: center; gap: 10px; }
+    .info-bar .fa-plus { display: none; }
+    .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+    .social-icons { justify-content: center; }
 }
