@@ -348,52 +348,64 @@ img {
 @media screen and (max-width: 768px) {
 
     .navbar {
-        height: auto; 
+        height: auto;
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         padding: 0; 
         margin-top: 33px; 
         background: #121212;
     }
 
     .auth-buttons {
-        order: 1; 
-        display: flex !important; 
+        order: 1;
+        display: flex !important;
         width: 100%;
-        background-color: white; 
+        background-color: white;
         justify-content: center;
-        padding: 10px 0;
+        padding: 8px 0;
         margin: 0;
     }
 
     .auth-buttons .login-link {
-        color: black !important; 
-        font-size: 12px;
+        color: black !important;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .auth-buttons .divider {
+        color: #666;
     }
 
     .nav-left {
         order: 2;
         width: 100%;
         display: flex;
-        justify-content: space-between; 
+        justify-content: space-between;
         align-items: center;
         padding: 10px 20px;
-        gap: 0;
+        background: #121212;
+    }
+
+    .logo {
+        margin: 0;
+        font-size: 26px;
     }
 
     .hamburger {
         display: block !important;
         font-size: 24px;
         color: white;
+        margin: 0;
     }
 
     .nav-icons {
         order: 3;
         width: 100%;
         display: flex;
-        justify-content: center; 
+        justify-content: center;
         gap: 30px;
-        padding-bottom: 15px;
+        padding: 10px 0 20px 0;
+        background: #121212;
     }
 
     .nav-menu {
@@ -401,6 +413,7 @@ img {
         display: none;
         width: 100%;
         background: #1e1e1e;
+        text-align: center;
     }
 
     .menu-toggle:checked ~ .nav-menu {
@@ -409,58 +422,53 @@ img {
 
     .nav-links {
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         padding: 20px;
         gap: 15px;
     }
 
-    .grid-5 {
-        grid-template-columns: repeat(2, 1fr);
+    .grid-5 { 
+        grid-template-columns: repeat(2, 1fr); 
         gap: 10px; 
     }
 
-    .grid-2 {
-        grid-template-columns: 1fr;
-    }
-
-    .grid-4 {
-        grid-template-columns: 1fr;
-        text-align: center;
+    .grid-2, .grid-4 { 
+        grid-template-columns: 1fr; 
     }
 
     .hero-text {
-        top: 20%;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        width: 100%;
+        top: 20%; 
+        left: 50%; 
+        transform: translateX(-50%); 
+        text-align: center; 
+        width: 100%; 
     }
 
-    .hero-text h1 {
+    .hero-text h1 { 
         font-size: 32px; 
     }
 
-    .flex-sb {
+    .flex-sb { 
         flex-wrap: wrap; 
     }
-    
-    .info-bar {
-        text-align: center;
-        justify-content: center;
-        gap: 10px;
+
+    .info-bar { 
+        text-align: center; 
+        justify-content: center; 
+        gap: 10px; 
     }
-    
-    .info-bar .fa-plus {
-        display: none;
+
+    .info-bar .fa-plus { 
+        display: none; 
     }
-    
-    .footer-bottom {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
+
+    .footer-bottom { 
+        flex-direction: column; 
+        gap: 20px; 
+        text-align: center; 
     }
-    
-    .social-icons {
+
+    .social-icons { 
         justify-content: center;
     }
 }
