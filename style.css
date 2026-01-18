@@ -398,16 +398,20 @@ img {
         order: 2;
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start; /* Aligns both items to the left */
         align-items: center;
         padding: 15px 20px;
-        gap: 0;
+        gap: 20px; /* Creates space between Logo and Hamburger */
     }
 
-    /* Ensure Logo and Hamburger look right in the middle line */
-    .logo { margin: 0 !important; }
+    .logo {
+        order: 1; /* Keeps H&M first */
+        margin: 0;
+    }
+
     .hamburger {
-        display: block !important;
+        order: 2; /* Moves Hamburger to the second position (right next to logo) */
+        display: block;
         font-size: 24px;
         color: white;
     }
