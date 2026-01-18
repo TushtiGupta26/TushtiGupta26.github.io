@@ -346,125 +346,115 @@ img {
 
 
 @media screen and (max-width: 768px) {
-    /* 1. Top Bar (Red Sale Text) */
     .top-bar {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        height: 35px;
-        padding: 5px 15px !important;
-        font-size: 11px !important;
-        display: flex !important;
-        justify-content: center !important;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
         z-index: 1000;
+        background: white;
     }
 
     .top-bar i {
-        display: none; /* Hide the plus icon to save space on mobile */
+        display: block;
     }
 
-    /* 2. Navbar Container */
     .navbar {
-        margin-top: 35px; /* Sits below the red top-bar */
-        height: auto !important;
-        display: flex !important;
-        flex-direction: column !important; /* Stacks the rows */
-        padding: 0 !important;
-        background: #121212;
         position: fixed;
-        top: 0;
+        top: 33px; /* Adjusted to sit exactly below top-bar */
         width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin-top: 0;
+        background: #121212;
+        z-index: 999;
     }
 
-    /* ROW 1: Hamburger (Left) and Logo (Center) */
-    .nav-left {
-        order: 1 !important;
-        width: 100% !important;
+    /* LINE 1: White Bar (Sign Up | Log In) */
+    .auth-buttons {
+        order: 1 !important; /* Moves to very top */
         display: flex !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        padding: 10px 20px !important;
-        flex-direction: row-reverse !important; /* Flips Hamburger to the LEFT */
+        width: 100% !important;
+        background-color: white !important; 
+        justify-content: center !important;
+        padding: 10px 0 !important;
+        margin: 0 !important;
     }
 
+    .auth-buttons .login-link {
+        color: black !important; /* Black text for white bar */
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .nav-left {
+        order: 2;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        gap: 0;
+    }
+
+    /* Ensure Logo and Hamburger look right in the middle line */
+    .logo { margin: 0 !important; }
     .hamburger {
         display: block !important;
-        font-size: 22px;
-        color: white;
-        cursor: pointer;
-    }
-
-    .logo {
         font-size: 24px;
-        margin-right: auto; /* Pushes logo away from the right edge */
-        padding-right: 20px; /* Adjust centering */
+        color: white;
     }
 
-    /* ROW 2: Icons Row (Search, User, Heart, Bag) */
     .nav-icons {
-        order: 2 !important;
-        width: 100% !important;
-        display: flex !important;
-        justify-content: center !important;
-        gap: 35px !important;
-        padding: 15px 0 !important;
-        border-bottom: 1px solid #333;
-    }
-
-    /* ROW 3: Auth Buttons (Sign Up | Log In) */
-    .auth-buttons {
         order: 3 !important;
         width: 100% !important;
         display: flex !important;
         justify-content: center !important;
-        padding: 10px 0 !important;
-        margin: 0 !important;
-        background: #000; /* Contrast background */
+        gap: 35px !important;
+        padding: 10px 0 15px 0 !important; /* Slightly reduced bottom padding */
+        border-bottom: 1px solid #333; /* Optional: adds a subtle line to separate the header from the content */
     }
 
-    .auth-buttons .login-link {
-        font-size: 12px;
-        letter-spacing: 1px;
-    }
-
-    /* 3. Hero Section - Adjusting Top Margin */
-    .hero-container {
-        margin-top: 175px !important; /* Prevents header from covering the hero image */
-    }
-
-    .hero-text {
-        top: 15%;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        width: 100%;
-    }
-
-    .hero-text h1 {
-        font-size: 32px;
-    }
-
-    /* 4. Grid Adjustments for Mobile */
-    .grid-5 {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        padding: 0 10px;
-    }
-
-    .grid-2, .grid-4 {
-        grid-template-columns: 1fr;
-        padding: 0 10px;
-    }
-
-    /* 5. Menu Logic (Hidden by default) */
+    /* --- Menu Toggle Logic --- */
     .nav-menu {
+        order: 4 !important;
         display: none;
         width: 100%;
         background: #1e1e1e;
+        position: relative;
+        top: 0;
     }
 
     .menu-toggle:checked ~ .nav-menu {
         display: block !important;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        text-align: center;
+    }
+
+    /* --- Keep your other grid/hero styles below --- */
+    .grid-5 { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .grid-2, .grid-4 { grid-template-columns: 1fr; }
+    .hero-text { top: 20%; left: 50%; transform: translateX(-50%); text-align: center; width: 100%; }
+    .hero-text h1 { font-size: 32px; }
+    .flex-sb { flex-wrap: wrap; }
+    .info-bar { text-align: center; justify-content: center; gap: 10px; }
+    .info-bar .fa-plus { display: none; }
+    .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+    .social-icons { justify-content: center; }
+    .hero-container {
+        margin-top: 180px; /* Pushes the main content down so it's visible */
     }
 }
