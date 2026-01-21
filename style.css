@@ -49,7 +49,7 @@ img {
     width: 100%;
     z-index: 99;
     position: fixed;
-    padding: 20px 40px;
+    padding: 20px 20px;
     height: 64px;
     background: #121212;
     display: flex;
@@ -320,145 +320,128 @@ img {
 .menu-toggle{
     display: none;
 }
-@media screen and (max-width: 1024px) {
-    
-    .navbar {
-        padding: 20px 10px;
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .top-bar {
+        padding: 10px 10px;
+        font-size: 12px;
     }
-    
+
+    .navbar {
+        padding: 15px 10px;
+        height: auto;
+        justify-content: space-between;
+    }
+
     .nav-left {
         gap: 15px;
     }
 
-    .grid-5 {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .grid-4 {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
-
-    .hero-text h1 {
-        font-size: 50px;
-    }
-}
-
-
-@media screen and (max-width: 768px) {
-    .top-bar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        z-index: 1000;
-        background: white;
-    }
-
-    .top-bar i {
-        display: block;
-    }
-
-    .navbar {
-        position: fixed;
-        top: 33px; /* Adjusted to sit exactly below top-bar */
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        margin-top: 0;
-        background: #121212;
-        z-index: 999;
-    }
-
-    /* LINE 1: White Bar (Sign Up | Log In) */
-    .auth-buttons {
-        order: 1 !important; /* Moves to very top */
-        display: flex !important;
-        width: 100% !important;
-        background-color: white !important; 
-        justify-content: center !important;
-        padding: 10px 0 !important;
-        margin: 0 !important;
-    }
-
-    .auth-buttons .login-link {
-        color: black !important; /* Black text for white bar */
-        font-size: 13px;
-        font-weight: bold;
-    }
-
-    .nav-left {
-        order: 2;
-        width: 100%;
-        display: flex;
-        justify-content: flex-start; /* Aligns both items to the left */
-        align-items: center;
-        padding: 15px 20px;
-        gap: 20px; /* Creates space between Logo and Hamburger */
-    }
-
-    .logo {
-        order: 1; /* Keeps H&M first */
-        margin: 0;
-    }
-
     .hamburger {
-        order: 2; /* Moves Hamburger to the second position (right next to logo) */
         display: block;
-        font-size: 24px;
-        color: white;
-    }
-
-    .nav-icons {
-        order: 3 !important;
-        width: 100% !important;
-        display: flex !important;
-        justify-content: center !important;
-        gap: 35px !important;
-        padding: 10px 0 15px 0 !important; /* Slightly reduced bottom padding */
-        border-bottom: 1px solid #333; /* Optional: adds a subtle line to separate the header from the content */
-    }
-
-    /* --- Menu Toggle Logic --- */
-    .nav-menu {
-        order: 4 !important;
-        display: none;
-        width: 100%;
-        background: #1e1e1e;
-        position: relative;
-        top: 0;
-    }
-
-    .menu-toggle:checked ~ .nav-menu {
-        display: block !important;
+        cursor: pointer;
+        font-size: 20px;
     }
 
     .nav-links {
+        display: none;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #121212;
+        display: none;
+        z-index: 100;
+    }
+
+    .nav-menu .nav-links {
         display: flex;
         flex-direction: column;
         padding: 20px;
         gap: 15px;
-        text-align: center;
     }
 
-    /* --- Keep your other grid/hero styles below --- */
-    .grid-5 { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-    .grid-2, .grid-4 { grid-template-columns: 1fr; }
-    .hero-text { top: 20%; left: 50%; transform: translateX(-50%); text-align: center; width: 100%; }
-    .hero-text h1 { font-size: 32px; }
-    .flex-sb { flex-wrap: wrap; }
-    .info-bar { text-align: center; justify-content: center; gap: 10px; }
-    .info-bar .fa-plus { display: none; }
-    .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
-    .social-icons { justify-content: center; }
-    .hero-container {
-        margin-top: 180px; /* Pushes the main content down so it's visible */
+    .nav-menu .nav-links a {
+        margin-right: 0;
+        font-size: 16px;
+    }
+
+    #menu-toggle:checked ~ .nav-menu {
+        display: block;
+    }
+
+    .auth-buttons {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .nav-icons {
+        gap: 15px;
+        font-size: 16px;
+
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .hero-text { 
+        top: 20%; 
+        left: 50%; 
+        transform: translateX(-50%); 
+        text-align: center; 
+        width: 100%; }
+
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .grid-5 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .grid-4 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .section-header {
+        padding: 0 10px;
+    }
+
+    .campaign-text {
+        padding: 0 5px;
+        font-size: 12px;
+    }
+
+    .feature-text {
+        padding-left: 10px;
+    }
+
+    .site-footer {
+        padding: 40px 10px;
+    }
+
+    .hm-footer {
+        padding: 20px 0;
+    }
+
+    .footer-top {
+        padding-left: 10px;
+    }
+
+    .footer-bottom {
+        padding: 0 10px;
+    }
+
+    .social-icons {
+        gap: 15px;
+        font-size: 18px;
     }
 }
