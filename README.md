@@ -1,11 +1,14 @@
 H&M Website Clone-
 A front-end clone of the H&M homepage.
 
+Live Demo: https://tushtigupta26.github.io/ 
+Repository: https://github.com/TushtiGupta26/TushtiGupta26.github.io
+
 Website Chosen-
 H&M (https://www2.hm.com/)
 
 Tech Stack-
-HTML5
+HTML5,
 CSS3
 
 Features Implemented-
